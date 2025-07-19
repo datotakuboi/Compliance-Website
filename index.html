@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philippines Business Compliance Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-balance-scale"></i>
+                    <span>PH Compliance Hub</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#tools">Compliance Tools</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Navigate Philippine Business Compliance with Confidence</h1>
+                <p>Simplifying legal compliance for Filipino businesses through interactive tools and comprehensive guides.</p>
+                <div class="hero-buttons">
+                    <a href="#tools" class="btn btn-primary">Start Compliance Check</a>
+                    <a href="#resources" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+        </section>
+
+        <!-- Featured Laws Section -->
+        <section class="featured-laws">
+            <div class="container">
+                <h2>Key Philippine Business Laws</h2>
+                <div class="laws-grid">
+                    <div class="law-card">
+                        <i class="fas fa-user-shield"></i>
+                        <h3>Data Privacy Act</h3>
+                        <p>Republic Act 10173 - Protect personal data and ensure privacy compliance</p>
+                    </div>
+                    <div class="law-card">
+                        <i class="fas fa-building"></i>
+                        <h3>Corporation Code</h3>
+                        <p>SEC compliance and corporate governance requirements</p>
+                    </div>
+                    <div class="law-card">
+                        <i class="fas fa-receipt"></i>
+                        <h3>Tax Code</h3>
+                        <p>BIR obligations and tax compliance requirements</p>
+                    </div>
+                    <div class="law-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Labor Code</h3>
+                        <p>Employee rights and workplace compliance standards</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compliance Tools Section -->
+        <section id="tools" class="tools">
+            <div class="container">
+                <h2>Interactive Compliance Tools</h2>
+                
+                <!-- Data Privacy Act Tool -->
+                <div class="tool-section">
+                    <div class="tool-header">
+                        <h3><i class="fas fa-user-shield"></i> Data Privacy Act Compliance Checker</h3>
+                        <p>Assess your business compliance with RA 10173 (Data Privacy Act of 2012)</p>
+                    </div>
+                    
+                    <div class="compliance-tool">
+                        <div class="tool-intro">
+                            <h4>Does your business need to comply with the Data Privacy Act?</h4>
+                            <p>Answer these questions to determine your compliance requirements:</p>
+                        </div>
+                        
+                        <form id="dpaAssessment" class="assessment-form">
+                            <div class="question-group">
+                                <label class="question">1. Does your business collect, process, or store personal information?</label>
+                                <div class="radio-group">
+                                    <input type="radio" id="q1_yes" name="q1" value="yes">
+                                    <label for="q1_yes">Yes</label>
+                                    <input type="radio" id="q1_no" name="q1" value="no">
+                                    <label for="q1_no">No</label>
+                                </div>
+                            </div>
+
+                            <div class="question-group">
+                                <label class="question">2. Do you have 20 or more employees?</label>
+                                <div class="radio-group">
+                                    <input type="radio" id="q2_yes" name="q2" value="yes">
+                                    <label for="q2_yes">Yes</label>
+                                    <input type="radio" id="q2_no" name="q2" value="no">
+                                    <label for="q2_no">No</label>
+                                </div>
+                            </div>
+
+                            <div class="question-group">
+                                <label class="question">3. Do you process sensitive personal information (health, financial, government IDs)?</label>
+                                <div class="radio-group">
+                                    <input type="radio" id="q3_yes" name="q3" value="yes">
+                                    <label for="q3_yes">Yes</label>
+                                    <input type="radio" id="q3_no" name="q3" value="no">
+                                    <label for="q3_no">No</label>
+                                </div>
+                            </div>
+
+                            <div class="question-group">
+                                <label class="question">4. Is your business involved in online services or e-commerce?</label>
+                                <div class="radio-group">
+                                    <input type="radio" id="q4_yes" name="q4" value="yes">
+                                    <label for="q4_yes">Yes</label>
+                                    <input type="radio" id="q4_no" name="q4" value="no">
+                                    <label for="q4_no">No</label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Check Compliance Requirements</button>
+                        </form>
+
+                        <div id="assessmentResult" class="result-section" style="display: none;">
+                            <h4>Your Compliance Assessment</h4>
+                            <div id="resultContent"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compliance Checklist -->
+                <div class="checklist-section">
+                    <h3><i class="fas fa-list-check"></i> DPA Compliance Checklist</h3>
+                    <div id="complianceChecklist" class="checklist">
+                        <div class="checklist-item">
+                            <input type="checkbox" id="item1">
+                            <label for="item1">Appoint a Data Protection Officer (if required)</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="item2">
+                            <label for="item2">Create Privacy Notice and Policy</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="item3">
+                            <label for="item3">Implement data security measures</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="item4">
+                            <label for="item4">Establish consent mechanisms</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="item5">
+                            <label for="item5">Create data breach response plan</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="item6">
+                            <label for="item6">Register with National Privacy Commission</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="item7">
+                            <label for="item7">Train employees on data privacy</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="item8">
+                            <label for="item8">Conduct regular privacy impact assessments</label>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                        <span class="progress-text" id="progressText">0% Complete</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="resources">
+            <div class="container">
+                <h2>Compliance Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <i class="fas fa-file-alt"></i>
+                        <h3>Legal Documents</h3>
+                        <p>Download templates and forms for compliance documentation</p>
+                        <a href="#" class="resource-link">View Documents</a>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Training Materials</h3>
+                        <p>Educational content and training modules for your team</p>
+                        <a href="#" class="resource-link">Start Learning</a>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Expert Consultation</h3>
+                        <p>Connect with legal experts for personalized compliance advice</p>
+                        <a href="#" class="resource-link">Book Consultation</a>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-newspaper"></i>
+                        <h3>Legal Updates</h3>
+                        <p>Stay informed about changes in Philippine business laws</p>
+                        <a href="#" class="resource-link">Subscribe</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Get Help with Compliance</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Need Assistance?</h3>
+                        <p>Our team of legal experts is here to help you navigate Philippine business compliance requirements.</p>
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <span>info@phcompliancehub.com</span>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fas fa-phone"></i>
+                                <span>+63 2 8123 4567</span>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Makati City, Metro Manila</span>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="text" placeholder="Company Name">
+                        <textarea placeholder="How can we help you with compliance?" rows="5" required></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>PH Compliance Hub</span>
+                    </div>
+                    <p>Simplifying business compliance in the Philippines</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#tools">Compliance Tools</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PH Compliance Hub. For educational purposes only. Consult with legal professionals for specific advice.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
