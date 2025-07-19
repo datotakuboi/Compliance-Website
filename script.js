@@ -21,7 +21,239 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeComplianceChecklist();
     initializeContactForm();
     initializeSmoothScrolling();
+    initializeResourceInteractions();
+    initializeModalInteractions();
+    initializeLawCardInteractions();
 });
+
+// Law Card Interactions
+function initializeLawCardInteractions() {
+    // Add click handlers for law cards
+    const lawCards = document.querySelectorAll('.law-card[data-law]');
+    
+    lawCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const lawType = this.getAttribute('data-law');
+            showLawModal(lawType);
+        });
+    });
+}
+
+function showLawModal(lawType) {
+    const modalOverlay = document.getElementById('modal-overlay');
+    const modalContent = document.getElementById(`${lawType}-modal`);
+    
+    if (modalOverlay && modalContent) {
+        // Hide all modal content first
+        const allModals = document.querySelectorAll('.modal-content');
+        allModals.forEach(modal => {
+            modal.style.display = 'none';
+        });
+        
+        // Show the selected modal
+        modalContent.style.display = 'block';
+        modalOverlay.style.display = 'flex';
+        
+        // Prevent body scrolling when modal is open
+        document.body.style.overflow = 'hidden';
+        
+        // Add active state to the clicked law card
+        const lawCards = document.querySelectorAll('.law-card');
+        lawCards.forEach(card => card.classList.remove('active'));
+        
+        const clickedCard = document.querySelector(`[data-law="${lawType}"]`);
+        if (clickedCard) {
+            clickedCard.classList.add('active');
+        }
+        
+        // Focus trap for accessibility
+        setTimeout(() => {
+            const closeButton = modalContent.querySelector('.close-modal');
+            if (closeButton) {
+                closeButton.focus();
+            }
+        }, 100);
+    }
+}
+
+// Modal Interactions for Footer Legal Links
+function initializeModalInteractions() {
+    // Add click handlers for footer legal links
+    const modalLinks = document.querySelectorAll('[data-modal]');
+    const modalOverlay = document.getElementById('modal-overlay');
+    const closeButtons = document.querySelectorAll('.close-modal');
+    
+    modalLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const modalType = this.getAttribute('data-modal');
+            showModal(modalType);
+        });
+    });
+    
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            hideModal();
+        });
+    });
+    
+    // Close modal when clicking on overlay background
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', function(e) {
+            if (e.target === modalOverlay) {
+                hideModal();
+            }
+        });
+    }
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            const modalOverlay = document.getElementById('modal-overlay');
+            if (modalOverlay && modalOverlay.style.display === 'flex') {
+                hideModal();
+            }
+        }
+    });
+}
+
+function showModal(modalType) {
+    const modalOverlay = document.getElementById('modal-overlay');
+    const modalContent = document.getElementById(`${modalType}-modal`);
+    
+    if (modalOverlay && modalContent) {
+        // Hide all modal content first
+        const allModals = document.querySelectorAll('.modal-content');
+        allModals.forEach(modal => {
+            modal.style.display = 'none';
+        });
+        
+        // Show the selected modal
+        modalContent.style.display = 'block';
+        modalOverlay.style.display = 'flex';
+        
+        // Prevent body scrolling when modal is open
+        document.body.style.overflow = 'hidden';
+        
+        // Focus trap for accessibility
+        setTimeout(() => {
+            const closeButton = modalContent.querySelector('.close-modal');
+            if (closeButton) {
+                closeButton.focus();
+            }
+        }, 100);
+    }
+}
+
+function hideModal() {
+    const modalOverlay = document.getElementById('modal-overlay');
+    
+    if (modalOverlay) {
+        modalOverlay.style.display = 'none';
+        
+        // Restore body scrolling
+        document.body.style.overflow = '';
+        
+        // Hide all modal content
+        const allModals = document.querySelectorAll('.modal-content');
+        allModals.forEach(modal => {
+            modal.style.display = 'none';
+        });
+        
+        // Remove active states from law cards
+        const lawCards = document.querySelectorAll('.law-card');
+        lawCards.forEach(card => card.classList.remove('active'));
+    }
+}
+
+// Resource Content Interactions
+function initializeResourceInteractions() {
+    // Add click handlers for resource links
+    const resourceLinks = document.querySelectorAll('.resource-link');
+    const closeButtons = document.querySelectorAll('.close-content');
+    
+    resourceLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const resourceType = this.getAttribute('data-resource');
+            showResourceContent(resourceType);
+        });
+    });
+    
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const resourceType = this.getAttribute('data-resource');
+            hideResourceContent(resourceType);
+        });
+    });
+    
+    // Close content when clicking outside
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('resource-content-container')) {
+            hideAllResourceContent();
+        }
+    });
+    
+    // Close content with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            hideAllResourceContent();
+        }
+    });
+}
+
+function showResourceContent(resourceType) {
+    // Hide all other content areas first
+    hideAllResourceContent();
+    
+    // Show the selected content area
+    const contentArea = document.getElementById(`${resourceType}-content`);
+    if (contentArea) {
+        contentArea.style.display = 'block';
+        
+        // Smooth scroll to the content area
+        setTimeout(() => {
+            contentArea.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start' 
+            });
+        }, 100);
+        
+        // Add active state to the clicked resource card
+        const resourceCards = document.querySelectorAll('.resource-card');
+        resourceCards.forEach(card => card.classList.remove('active'));
+        
+        const clickedLink = document.querySelector(`[data-resource="${resourceType}"]`);
+        if (clickedLink) {
+            const resourceCard = clickedLink.closest('.resource-card');
+            if (resourceCard) {
+                resourceCard.classList.add('active');
+            }
+        }
+    }
+}
+
+function hideResourceContent(resourceType) {
+    const contentArea = document.getElementById(`${resourceType}-content`);
+    if (contentArea) {
+        contentArea.style.display = 'none';
+        
+        // Remove active state from resource card
+        const resourceCards = document.querySelectorAll('.resource-card');
+        resourceCards.forEach(card => card.classList.remove('active'));
+    }
+}
+
+function hideAllResourceContent() {
+    const allContentAreas = document.querySelectorAll('.resource-content');
+    allContentAreas.forEach(area => {
+        area.style.display = 'none';
+    });
+    
+    // Remove active states from all resource cards
+    const resourceCards = document.querySelectorAll('.resource-card');
+    resourceCards.forEach(card => card.classList.remove('active'));
+}
 
 // Data Privacy Act Compliance Assessment
 function initializeComplianceAssessment() {

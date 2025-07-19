@@ -51,22 +51,22 @@
             <div class="container">
                 <h2>Key Philippine Business Laws</h2>
                 <div class="laws-grid">
-                    <div class="law-card">
+                    <div class="law-card" data-law="data-privacy">
                         <i class="fas fa-user-shield"></i>
                         <h3>Data Privacy Act</h3>
                         <p>Republic Act 10173 - Protect personal data and ensure privacy compliance</p>
                     </div>
-                    <div class="law-card">
+                    <div class="law-card" data-law="corporation">
                         <i class="fas fa-building"></i>
                         <h3>Corporation Code</h3>
                         <p>SEC compliance and corporate governance requirements</p>
                     </div>
-                    <div class="law-card">
+                    <div class="law-card" data-law="tax">
                         <i class="fas fa-receipt"></i>
                         <h3>Tax Code</h3>
                         <p>BIR obligations and tax compliance requirements</p>
                     </div>
-                    <div class="law-card">
+                    <div class="law-card" data-law="labor">
                         <i class="fas fa-users"></i>
                         <h3>Labor Code</h3>
                         <p>Employee rights and workplace compliance standards</p>
@@ -198,25 +198,351 @@
                         <i class="fas fa-file-alt"></i>
                         <h3>Legal Documents</h3>
                         <p>Download templates and forms for compliance documentation</p>
-                        <a href="#" class="resource-link">View Documents</a>
+                        <a href="#" class="resource-link" data-resource="documents">View Documents</a>
                     </div>
                     <div class="resource-card">
                         <i class="fas fa-graduation-cap"></i>
                         <h3>Training Materials</h3>
                         <p>Educational content and training modules for your team</p>
-                        <a href="#" class="resource-link">Start Learning</a>
+                        <a href="#" class="resource-link" data-resource="training">Start Learning</a>
                     </div>
                     <div class="resource-card">
                         <i class="fas fa-phone"></i>
                         <h3>Expert Consultation</h3>
                         <p>Connect with legal experts for personalized compliance advice</p>
-                        <a href="#" class="resource-link">Book Consultation</a>
+                        <a href="#" class="resource-link" data-resource="consultation">Book Consultation</a>
                     </div>
                     <div class="resource-card">
                         <i class="fas fa-newspaper"></i>
                         <h3>Legal Updates</h3>
                         <p>Stay informed about changes in Philippine business laws</p>
-                        <a href="#" class="resource-link">Subscribe</a>
+                        <a href="#" class="resource-link" data-resource="updates">Subscribe</a>
+                    </div>
+                </div>
+
+                <!-- Resource Content Areas -->
+                <div class="resource-content-container">
+                    <!-- Legal Documents Content -->
+                    <div id="documents-content" class="resource-content" style="display: none;">
+                        <div class="content-header">
+                            <h3><i class="fas fa-file-alt"></i> Legal Documents & Templates</h3>
+                            <button class="close-content" data-resource="documents">&times;</button>
+                        </div>
+                        <div class="content-body">
+                            <div class="content-grid">
+                                <div class="content-section">
+                                    <h4>Data Privacy Act Templates</h4>
+                                    <ul class="document-list">
+                                        <li><i class="fas fa-download"></i> Privacy Notice Template</li>
+                                        <li><i class="fas fa-download"></i> Data Processing Agreement</li>
+                                        <li><i class="fas fa-download"></i> Consent Form Template</li>
+                                        <li><i class="fas fa-download"></i> Data Breach Response Plan</li>
+                                        <li><i class="fas fa-download"></i> Privacy Impact Assessment Form</li>
+                                    </ul>
+                                </div>
+                                <div class="content-section">
+                                    <h4>Corporate Compliance</h4>
+                                    <ul class="document-list">
+                                        <li><i class="fas fa-download"></i> SEC Registration Forms</li>
+                                        <li><i class="fas fa-download"></i> Corporate Governance Manual</li>
+                                        <li><i class="fas fa-download"></i> Board Resolution Templates</li>
+                                        <li><i class="fas fa-download"></i> Compliance Officer Appointment</li>
+                                    </ul>
+                                </div>
+                                <div class="content-section">
+                                    <h4>Tax Compliance</h4>
+                                    <ul class="document-list">
+                                        <li><i class="fas fa-download"></i> BIR Registration Forms</li>
+                                        <li><i class="fas fa-download"></i> Tax Return Templates</li>
+                                        <li><i class="fas fa-download"></i> VAT Documentation</li>
+                                        <li><i class="fas fa-download"></i> Employee Tax Forms</li>
+                                    </ul>
+                                </div>
+                                <div class="content-section">
+                                    <h4>Labor Law</h4>
+                                    <ul class="document-list">
+                                        <li><i class="fas fa-download"></i> Employment Contract Template</li>
+                                        <li><i class="fas fa-download"></i> Employee Handbook Template</li>
+                                        <li><i class="fas fa-download"></i> DOLE Registration Forms</li>
+                                        <li><i class="fas fa-download"></i> Safety Program Template</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="content-footer">
+                                <p><strong>Note:</strong> These templates are for educational purposes. Always consult with legal professionals before using any legal documents in your business.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Training Materials Content -->
+                    <div id="training-content" class="resource-content" style="display: none;">
+                        <div class="content-header">
+                            <h3><i class="fas fa-graduation-cap"></i> Training Materials</h3>
+                            <button class="close-content" data-resource="training">&times;</button>
+                        </div>
+                        <div class="content-body">
+                            <div class="content-grid">
+                                <div class="content-section">
+                                    <h4>Data Privacy Training</h4>
+                                    <ul class="training-list">
+                                        <li>
+                                            <i class="fas fa-play-circle"></i>
+                                            <div>
+                                                <strong>Introduction to Data Privacy Act</strong>
+                                                <span>45 minutes • Beginner Level</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-play-circle"></i>
+                                            <div>
+                                                <strong>Employee Data Privacy Training</strong>
+                                                <span>30 minutes • All Staff</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-play-circle"></i>
+                                            <div>
+                                                <strong>Data Protection Officer Certification</strong>
+                                                <span>8 hours • Management Level</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content-section">
+                                    <h4>Corporate Compliance</h4>
+                                    <ul class="training-list">
+                                        <li>
+                                            <i class="fas fa-play-circle"></i>
+                                            <div>
+                                                <strong>SEC Compliance Requirements</strong>
+                                                <span>60 minutes • Directors & Officers</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-play-circle"></i>
+                                            <div>
+                                                <strong>Corporate Governance Best Practices</strong>
+                                                <span>90 minutes • Leadership Team</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content-section">
+                                    <h4>Tax & Financial</h4>
+                                    <ul class="training-list">
+                                        <li>
+                                            <i class="fas fa-play-circle"></i>
+                                            <div>
+                                                <strong>BIR Tax Compliance Workshop</strong>
+                                                <span>2 hours • Finance Team</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-play-circle"></i>
+                                            <div>
+                                                <strong>VAT & Withholding Tax Procedures</strong>
+                                                <span>90 minutes • Accounting Staff</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content-section">
+                                    <h4>Labor & Employment</h4>
+                                    <ul class="training-list">
+                                        <li>
+                                            <i class="fas fa-play-circle"></i>
+                                            <div>
+                                                <strong>Labor Code Compliance for HR</strong>
+                                                <span>3 hours • HR Personnel</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-play-circle"></i>
+                                            <div>
+                                                <strong>Workplace Safety Training</strong>
+                                                <span>45 minutes • All Employees</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Expert Consultation Content -->
+                    <div id="consultation-content" class="resource-content" style="display: none;">
+                        <div class="content-header">
+                            <h3><i class="fas fa-phone"></i> Expert Consultation Services</h3>
+                            <button class="close-content" data-resource="consultation">&times;</button>
+                        </div>
+                        <div class="content-body">
+                            <div class="consultation-intro">
+                                <p>Connect with our network of qualified legal professionals specializing in Philippine business law and compliance.</p>
+                            </div>
+                            <div class="content-grid">
+                                <div class="content-section">
+                                    <h4>Data Privacy Law Experts</h4>
+                                    <div class="expert-card">
+                                        <div class="expert-info">
+                                            <strong>Atty. Maria Santos</strong>
+                                            <span>Data Privacy Law Specialist</span>
+                                            <p>15+ years experience • NPC Certified • Former Corporate DPO</p>
+                                            <div class="expert-specialties">
+                                                <span class="specialty">DPA Compliance</span>
+                                                <span class="specialty">Privacy Impact Assessments</span>
+                                                <span class="specialty">Data Breach Response</span>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-secondary">Schedule Consultation</button>
+                                    </div>
+                                </div>
+                                <div class="content-section">
+                                    <h4>Corporate Law Experts</h4>
+                                    <div class="expert-card">
+                                        <div class="expert-info">
+                                            <strong>Atty. Juan Dela Cruz</strong>
+                                            <span>Corporate Law Attorney</span>
+                                            <p>20+ years experience • SEC Compliance • Corporate Governance</p>
+                                            <div class="expert-specialties">
+                                                <span class="specialty">SEC Registration</span>
+                                                <span class="specialty">Corporate Governance</span>
+                                                <span class="specialty">M&A Compliance</span>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-secondary">Schedule Consultation</button>
+                                    </div>
+                                </div>
+                                <div class="content-section">
+                                    <h4>Tax Law Experts</h4>
+                                    <div class="expert-card">
+                                        <div class="expert-info">
+                                            <strong>CPA Elena Rodriguez</strong>
+                                            <span>Tax Compliance Specialist</span>
+                                            <p>12+ years experience • BIR Accredited • Tax Court Experience</p>
+                                            <div class="expert-specialties">
+                                                <span class="specialty">BIR Compliance</span>
+                                                <span class="specialty">Tax Planning</span>
+                                                <span class="specialty">Tax Dispute Resolution</span>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-secondary">Schedule Consultation</button>
+                                    </div>
+                                </div>
+                                <div class="content-section">
+                                    <h4>Labor Law Experts</h4>
+                                    <div class="expert-card">
+                                        <div class="expert-info">
+                                            <strong>Atty. Rosa Fernandez</strong>
+                                            <span>Labor & Employment Attorney</span>
+                                            <p>18+ years experience • DOLE Consultant • HR Law Specialist</p>
+                                            <div class="expert-specialties">
+                                                <span class="specialty">Employment Law</span>
+                                                <span class="specialty">Labor Disputes</span>
+                                                <span class="specialty">HR Compliance</span>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-secondary">Schedule Consultation</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="consultation-rates">
+                                <h4>Consultation Rates</h4>
+                                <div class="rates-grid">
+                                    <div class="rate-item">
+                                        <strong>Initial Consultation</strong>
+                                        <span>₱3,000 - ₱5,000 (1 hour)</span>
+                                    </div>
+                                    <div class="rate-item">
+                                        <strong>Document Review</strong>
+                                        <span>₱2,000 - ₱8,000 per document</span>
+                                    </div>
+                                    <div class="rate-item">
+                                        <strong>Compliance Audit</strong>
+                                        <span>₱15,000 - ₱50,000 per assessment</span>
+                                    </div>
+                                    <div class="rate-item">
+                                        <strong>Ongoing Legal Support</strong>
+                                        <span>₱25,000 - ₱100,000 monthly retainer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Legal Updates Content -->
+                    <div id="updates-content" class="resource-content" style="display: none;">
+                        <div class="content-header">
+                            <h3><i class="fas fa-newspaper"></i> Legal Updates & News</h3>
+                            <button class="close-content" data-resource="updates">&times;</button>
+                        </div>
+                        <div class="content-body">
+                            <div class="subscription-options">
+                                <h4>Stay Updated with Philippine Business Law Changes</h4>
+                                <p>Get the latest updates on regulations, compliance requirements, and legal developments that affect your business.</p>
+                                
+                                <div class="subscription-grid">
+                                    <div class="subscription-plan">
+                                        <h5>Free Newsletter</h5>
+                                        <ul>
+                                            <li>Monthly legal updates</li>
+                                            <li>Compliance deadline reminders</li>
+                                            <li>Basic legal guides</li>
+                                        </ul>
+                                        <button class="btn btn-secondary">Subscribe Free</button>
+                                    </div>
+                                    <div class="subscription-plan premium">
+                                        <h5>Premium Updates</h5>
+                                        <ul>
+                                            <li>Weekly detailed analysis</li>
+                                            <li>Direct impact assessments</li>
+                                            <li>Compliance action plans</li>
+                                            <li>Priority email support</li>
+                                            <li>Downloadable summaries</li>
+                                        </ul>
+                                        <button class="btn btn-primary">Subscribe Premium</button>
+                                        <span class="price">₱1,500/month</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recent-updates">
+                                <h4>Recent Legal Updates</h4>
+                                <div class="updates-list">
+                                    <div class="update-item">
+                                        <div class="update-date">Dec 15, 2024</div>
+                                        <div class="update-content">
+                                            <h5>NPC Issues New Guidelines on Data Retention</h5>
+                                            <p>The National Privacy Commission released updated guidelines on data retention periods for different types of personal information...</p>
+                                            <span class="update-category">Data Privacy</span>
+                                        </div>
+                                    </div>
+                                    <div class="update-item">
+                                        <div class="update-date">Dec 10, 2024</div>
+                                        <div class="update-content">
+                                            <h5>SEC Implements Digital Registration System</h5>
+                                            <p>The Securities and Exchange Commission launches new online platform for corporate registration and compliance...</p>
+                                            <span class="update-category">Corporate Law</span>
+                                        </div>
+                                    </div>
+                                    <div class="update-item">
+                                        <div class="update-date">Dec 5, 2024</div>
+                                        <div class="update-content">
+                                            <h5>BIR Updates Tax Filing Deadlines for 2025</h5>
+                                            <p>Bureau of Internal Revenue announces revised deadlines and new requirements for annual tax returns...</p>
+                                            <span class="update-category">Tax Law</span>
+                                        </div>
+                                    </div>
+                                    <div class="update-item">
+                                        <div class="update-date">Nov 28, 2024</div>
+                                        <div class="update-content">
+                                            <h5>DOLE Issues New Workplace Safety Standards</h5>
+                                            <p>Department of Labor and Employment releases enhanced occupational safety and health requirements...</p>
+                                            <span class="update-category">Labor Law</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -278,9 +604,9 @@
                 <div class="footer-section">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#" data-modal="privacy">Privacy Policy</a></li>
+                        <li><a href="#" data-modal="terms">Terms of Service</a></li>
+                        <li><a href="#" data-modal="disclaimer">Disclaimer</a></li>
                     </ul>
                 </div>
             </div>
@@ -289,6 +615,511 @@
             </div>
         </div>
     </footer>
+
+    <!-- Legal Document Modals -->
+    <div id="modal-overlay" class="modal-overlay" style="display: none;">
+        <!-- Philippine Business Law Modals -->
+        <!-- Data Privacy Act Modal -->
+        <div id="data-privacy-modal" class="modal-content" style="display: none;">
+            <div class="modal-header">
+                <h2><i class="fas fa-user-shield"></i> Data Privacy Act (Republic Act 10173)</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h3>Overview</h3>
+                <p><strong>Republic Act No. 10173</strong>, also known as the Data Privacy Act of 2012, is the comprehensive data privacy law of the Philippines. It aims to protect the fundamental human right of privacy while ensuring the free flow of information for innovation, growth, and national development.</p>
+                
+                <h3>Who Must Comply</h3>
+                <ul>
+                    <li><strong>Personal Information Controllers (PICs)</strong> - Organizations that determine the purposes and means of processing personal data</li>
+                    <li><strong>Personal Information Processors (PIPs)</strong> - Organizations that process personal data on behalf of PICs</li>
+                    <li><strong>All businesses</strong> that collect, store, or process personal information of Filipino citizens</li>
+                    <li><strong>Government agencies</strong> handling personal data</li>
+                </ul>
+
+                <h3>Key Requirements</h3>
+                <ul>
+                    <li><strong>Registration:</strong> Register with the National Privacy Commission (NPC) if processing sensitive personal information or if you're a PIC with at least 1,000 individuals' data</li>
+                    <li><strong>Privacy Notice:</strong> Inform data subjects about data collection and processing purposes</li>
+                    <li><strong>Consent:</strong> Obtain proper consent before processing personal information</li>
+                    <li><strong>Data Protection Officer (DPO):</strong> Appoint a DPO if required by your business size and data processing activities</li>
+                    <li><strong>Security Measures:</strong> Implement organizational, physical, and technical security measures</li>
+                    <li><strong>Breach Notification:</strong> Report data breaches to NPC within 72 hours</li>
+                </ul>
+
+                <h3>Sensitive Personal Information</h3>
+                <p>Special protection is required for:</p>
+                <ul>
+                    <li>Health, medical, and genetic information</li>
+                    <li>Financial information and credit card details</li>
+                    <li>Government-issued ID numbers (SSS, TIN, passport, driver's license)</li>
+                    <li>Biometric data</li>
+                    <li>Sexual orientation and marital status</li>
+                    <li>Political affiliations and religious beliefs</li>
+                </ul>
+
+                <h3>Penalties</h3>
+                <ul>
+                    <li><strong>Unauthorized processing:</strong> ₱500,000 to ₱2,000,000 fine + 1-3 years imprisonment</li>
+                    <li><strong>Accessing due to negligence:</strong> ₱500,000 to ₱1,000,000 fine + 1-2 years imprisonment</li>
+                    <li><strong>Improper disposal:</strong> ₱100,000 to ₱500,000 fine + 6 months to 2 years imprisonment</li>
+                    <li><strong>Non-compliance with NPC orders:</strong> ₱100,000 to ₱1,000,000 fine</li>
+                </ul>
+
+                <h3>Getting Started</h3>
+                <ol>
+                    <li><strong>Data Mapping:</strong> Identify what personal data you collect and how it's processed</li>
+                    <li><strong>Legal Basis:</strong> Determine your legal basis for processing (consent, contract, legal obligation, etc.)</li>
+                    <li><strong>Privacy Notice:</strong> Create and publish your privacy notice</li>
+                    <li><strong>Security Measures:</strong> Implement appropriate technical and organizational measures</li>
+                    <li><strong>Registration:</strong> Register with NPC if required</li>
+                    <li><strong>Training:</strong> Train your staff on data privacy requirements</li>
+                </ol>
+
+                <h3>Useful Resources</h3>
+                <ul>
+                    <li><strong>National Privacy Commission:</strong> <a href="https://privacy.gov.ph" target="_blank">privacy.gov.ph</a></li>
+                    <li><strong>NPC Helpdesk:</strong> info@privacy.gov.ph</li>
+                    <li><strong>DPA Registration:</strong> Available through NPC online portal</li>
+                </ul>
+                
+                <p class="last-updated"><em>Last updated: December 2024</em></p>
+            </div>
+        </div>
+
+        <!-- Corporation Code Modal -->
+        <div id="corporation-modal" class="modal-content" style="display: none;">
+            <div class="modal-header">
+                <h2><i class="fas fa-building"></i> Revised Corporation Code (Republic Act 11232)</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h3>Overview</h3>
+                <p><strong>Republic Act No. 11232</strong>, the Revised Corporation Code of the Philippines, modernizes corporate law and governance. It replaced the old Corporation Code (Batas Pambansa 68) and introduces significant reforms for business incorporation and operation.</p>
+                
+                <h3>Who Must Comply</h3>
+                <ul>
+                    <li><strong>All corporations</strong> organized under Philippine law</li>
+                    <li><strong>Foreign corporations</strong> doing business in the Philippines</li>
+                    <li><strong>Directors and officers</strong> of corporations</li>
+                    <li><strong>Stockholders</strong> and other stakeholders</li>
+                </ul>
+
+                <h3>Key Changes & Requirements</h3>
+                <ul>
+                    <li><strong>Perpetual Corporate Term:</strong> Corporations now have perpetual existence unless otherwise specified</li>
+                    <li><strong>One Person Corporation (OPC):</strong> Single-person corporations are now allowed</li>
+                    <li><strong>Reduced Capital Requirements:</strong> Minimum paid-up capital reduced to ₱25,000</li>
+                    <li><strong>Electronic Meetings:</strong> Stockholders' and board meetings can be held virtually</li>
+                    <li><strong>Electronic Voting:</strong> Remote voting is permitted for meetings</li>
+                    <li><strong>Corporate Recovery:</strong> Enhanced rehabilitation procedures for distressed corporations</li>
+                </ul>
+
+                <h3>Compliance Requirements</h3>
+                <ul>
+                    <li><strong>SEC Registration:</strong> File Articles of Incorporation and By-laws with SEC</li>
+                    <li><strong>Annual Reports:</strong> Submit General Information Sheet (GIS) and Financial Statements annually</li>
+                    <li><strong>Board Meetings:</strong> Hold regular board meetings and maintain minutes</li>
+                    <li><strong>Stockholders' Meetings:</strong> Conduct annual stockholders' meetings</li>
+                    <li><strong>Corporate Books:</strong> Maintain required corporate records and books</li>
+                    <li><strong>Tax Compliance:</strong> File corporate income tax returns and other tax obligations</li>
+                </ul>
+
+                <h3>Corporate Governance</h3>
+                <ul>
+                    <li><strong>Board Composition:</strong> Minimum of 5 directors, maximum of 15</li>
+                    <li><strong>Independent Directors:</strong> Required for publicly-listed companies</li>
+                    <li><strong>Corporate Secretary:</strong> Must be a Filipino citizen and resident</li>
+                    <li><strong>Treasurer:</strong> May be a non-Filipino but must be a resident</li>
+                    <li><strong>Audit Committee:</strong> Required for certain corporations</li>
+                </ul>
+
+                <h3>Penalties for Non-Compliance</h3>
+                <ul>
+                    <li><strong>Failure to file reports:</strong> ₱1,000 per day of delay + possible delinquency</li>
+                    <li><strong>Operating without license:</strong> Fine of ₱1,000 to ₱10,000 per day</li>
+                    <li><strong>False statements:</strong> Criminal penalties under the Revised Penal Code</li>
+                    <li><strong>Corporate dissolution:</strong> For continued violations or ultra vires acts</li>
+                </ul>
+
+                <h3>Getting Started</h3>
+                <ol>
+                    <li><strong>Name Reservation:</strong> Reserve your corporate name with SEC</li>
+                    <li><strong>Articles of Incorporation:</strong> Prepare and notarize incorporation documents</li>
+                    <li><strong>SEC Registration:</strong> Submit documents and pay registration fees</li>
+                    <li><strong>BIR Registration:</strong> Obtain TIN and register for taxes</li>
+                    <li><strong>Mayor's Permit:</strong> Apply for business permit from local government</li>
+                    <li><strong>SSS/PhilHealth/Pag-IBIG:</strong> Register for social security benefits</li>
+                </ol>
+
+                <h3>Useful Resources</h3>
+                <ul>
+                    <li><strong>SEC Website:</strong> <a href="https://sec.gov.ph" target="_blank">sec.gov.ph</a></li>
+                    <li><strong>SEC Hotline:</strong> (02) 8818-0921 to 24</li>
+                    <li><strong>Online Registration:</strong> SEC i-Register system</li>
+                </ul>
+                
+                <p class="last-updated"><em>Last updated: December 2024</em></p>
+            </div>
+        </div>
+
+        <!-- Tax Code Modal -->
+        <div id="tax-modal" class="modal-content" style="display: none;">
+            <div class="modal-header">
+                <h2><i class="fas fa-receipt"></i> National Internal Revenue Code (Tax Code)</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h3>Overview</h3>
+                <p>The <strong>National Internal Revenue Code (NIRC)</strong> governs taxation in the Philippines. It covers income tax, value-added tax (VAT), excise tax, documentary stamp tax, and other national internal revenue taxes administered by the Bureau of Internal Revenue (BIR).</p>
+                
+                <h3>Who Must Comply</h3>
+                <ul>
+                    <li><strong>All businesses</strong> operating in the Philippines</li>
+                    <li><strong>Corporations</strong> (domestic and foreign)</li>
+                    <li><strong>Partnerships</strong> and other business entities</li>
+                    <li><strong>Self-employed individuals</strong> and professionals</li>
+                    <li><strong>Employers</strong> with employees</li>
+                </ul>
+
+                <h3>Major Tax Types for Businesses</h3>
+                <ul>
+                    <li><strong>Corporate Income Tax:</strong> 25% of net taxable income (20% for domestic corporations with net taxable income not exceeding ₱5M and total assets not exceeding ₱100M)</li>
+                    <li><strong>Value-Added Tax (VAT):</strong> 12% on sale of goods and services</li>
+                    <li><strong>Withholding Taxes:</strong> Various rates depending on type of payment</li>
+                    <li><strong>Documentary Stamp Tax:</strong> On documents, instruments, and transactions</li>
+                    <li><strong>Fringe Benefits Tax:</strong> 35% on fringe benefits given to employees</li>
+                </ul>
+
+                <h3>Key Compliance Requirements</h3>
+                <ul>
+                    <li><strong>BIR Registration:</strong> Obtain Tax Identification Number (TIN) and register your business</li>
+                    <li><strong>Books of Accounts:</strong> Maintain proper accounting records</li>
+                    <li><strong>Tax Returns:</strong> File monthly, quarterly, and annual tax returns</li>
+                    <li><strong>Invoicing:</strong> Issue BIR-registered receipts and invoices</li>
+                    <li><strong>Withholding:</strong> Withhold and remit taxes from payments to suppliers/employees</li>
+                    <li><strong>Tax Payments:</strong> Pay taxes on time to avoid penalties</li>
+                </ul>
+
+                <h3>Filing Deadlines</h3>
+                <ul>
+                    <li><strong>Monthly VAT Returns:</strong> 20th day of the following month</li>
+                    <li><strong>Quarterly Income Tax:</strong> Last day of the month following each quarter</li>
+                    <li><strong>Annual Income Tax Return:</strong> April 15 of the following year</li>
+                    <li><strong>Withholding Tax Returns:</strong> 10th day of the following month</li>
+                    <li><strong>BIR Annual Registration Fee:</strong> January 31 of each year</li>
+                </ul>
+
+                <h3>Tax Incentives Available</h3>
+                <ul>
+                    <li><strong>CREATE Act Benefits:</strong> Reduced corporate income tax rates</li>
+                    <li><strong>PEZA Registration:</strong> Tax holidays and special rates for export businesses</li>
+                    <li><strong>BOI Incentives:</strong> For preferred investment activities</li>
+                    <li><strong>Barangay Micro Business Enterprises (BMBEs):</strong> Tax exemptions for qualifying small businesses</li>
+                    <li><strong>OSD (Optional Standard Deduction):</strong> 40% of gross income instead of itemized deductions</li>
+                </ul>
+
+                <h3>Penalties for Non-Compliance</h3>
+                <ul>
+                    <li><strong>Late filing:</strong> 25% of tax due or ₱1,000, whichever is higher</li>
+                    <li><strong>Late payment:</strong> 20% of tax due plus 12% annual interest</li>
+                    <li><strong>Failure to file:</strong> 50% of tax due or ₱10,000, whichever is higher</li>
+                    <li><strong>Tax evasion:</strong> Fine of ₱500,000 to ₱10,000,000 plus imprisonment</li>
+                    <li><strong>Non-registration:</strong> Closure of business and criminal penalties</li>
+                </ul>
+
+                <h3>Getting Started</h3>
+                <ol>
+                    <li><strong>BIR Registration:</strong> Apply for TIN and register your business type</li>
+                    <li><strong>Authority to Print:</strong> Get authorization to print receipts/invoices</li>
+                    <li><strong>Accounting System:</strong> Set up proper bookkeeping and accounting</li>
+                    <li><strong>Tax Calendar:</strong> Create a calendar of filing and payment deadlines</li>
+                    <li><strong>Professional Help:</strong> Consider hiring a CPA or tax consultant</li>
+                </ol>
+
+                <h3>Useful Resources</h3>
+                <ul>
+                    <li><strong>BIR Website:</strong> <a href="https://bir.gov.ph" target="_blank">bir.gov.ph</a></li>
+                    <li><strong>BIR Hotline:</strong> (02) 8981-8888</li>
+                    <li><strong>eFPS (Electronic Filing and Payment System):</strong> Online tax filing platform</li>
+                    <li><strong>Revenue Regulations:</strong> Available on BIR website</li>
+                </ul>
+                
+                <p class="last-updated"><em>Last updated: December 2024</em></p>
+            </div>
+        </div>
+
+        <!-- Labor Code Modal -->
+        <div id="labor-modal" class="modal-content" style="display: none;">
+            <div class="modal-header">
+                <h2><i class="fas fa-users"></i> Labor Code of the Philippines</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h3>Overview</h3>
+                <p>The <strong>Labor Code of the Philippines (Presidential Decree 442)</strong> governs employment relationships, worker rights, and employer obligations. It covers hiring, wages, working conditions, termination, and social benefits for employees.</p>
+                
+                <h3>Who Must Comply</h3>
+                <ul>
+                    <li><strong>All employers</strong> with employees in the Philippines</li>
+                    <li><strong>Corporations, partnerships,</strong> and sole proprietorships</li>
+                    <li><strong>Foreign companies</strong> with Filipino employees</li>
+                    <li><strong>Government contractors</strong> and service providers</li>
+                    <li><strong>Manpower agencies</strong> and recruitment firms</li>
+                </ul>
+
+                <h3>Key Employment Requirements</h3>
+                <ul>
+                    <li><strong>Employment Contracts:</strong> Written contracts for all employees</li>
+                    <li><strong>Minimum Wage:</strong> Comply with regional wage orders</li>
+                    <li><strong>Work Hours:</strong> Maximum 8 hours per day, 48 hours per week</li>
+                    <li><strong>Overtime Pay:</strong> 25% premium for work beyond 8 hours</li>
+                    <li><strong>Holiday Pay:</strong> Regular and special holiday compensation</li>
+                    <li><strong>13th Month Pay:</strong> Mandatory year-end bonus equivalent to 1/12 of annual salary</li>
+                </ul>
+
+                <h3>Mandatory Benefits</h3>
+                <ul>
+                    <li><strong>SSS (Social Security System):</strong> Social security coverage</li>
+                    <li><strong>PhilHealth:</strong> Health insurance coverage</li>
+                    <li><strong>Pag-IBIG:</strong> Housing development fund contribution</li>
+                    <li><strong>Service Incentive Leave:</strong> 5 days paid leave after 1 year of service</li>
+                    <li><strong>Maternity/Paternity Leave:</strong> 105 days for mothers, 7 days for fathers</li>
+                    <li><strong>Separation Pay:</strong> For authorized causes of termination</li>
+                </ul>
+
+                <h3>Working Conditions & Safety</h3>
+                <ul>
+                    <li><strong>Occupational Safety and Health:</strong> Provide safe working environment</li>
+                    <li><strong>Workers' Compensation:</strong> Coverage for work-related injuries</li>
+                    <li><strong>Night Shift Differential:</strong> 10% premium for work between 10 PM to 6 AM</li>
+                    <li><strong>Rest Periods:</strong> Minimum 24-hour rest period per week</li>
+                    <li><strong>Meal Breaks:</strong> At least 60 minutes for meals during shifts exceeding 6 hours</li>
+                </ul>
+
+                <h3>Termination and Due Process</h3>
+                <ul>
+                    <li><strong>Just Causes:</strong> Serious misconduct, willful disobedience, gross negligence</li>
+                    <li><strong>Authorized Causes:</strong> Redundancy, retrenchment, business closure</li>
+                    <li><strong>Due Process:</strong> Written notice and opportunity to be heard</li>
+                    <li><strong>Security of Tenure:</strong> Employees cannot be dismissed without just cause</li>
+                    <li><strong>Final Pay:</strong> Must include all earned wages and benefits</li>
+                </ul>
+
+                <h3>Labor Standards Compliance</h3>
+                <ul>
+                    <li><strong>DOLE Registration:</strong> Register establishment with Department of Labor</li>
+                    <li><strong>Work Rules:</strong> Post company policies and labor standards</li>
+                    <li><strong>Payroll Records:</strong> Maintain detailed employee records</li>
+                    <li><strong>Labor Standards Posting:</strong> Display employee rights and company policies</li>
+                    <li><strong>Inspection Compliance:</strong> Allow DOLE inspections and comply with findings</li>
+                </ul>
+
+                <h3>Penalties for Violations</h3>
+                <ul>
+                    <li><strong>Underpayment of wages:</strong> Payment of deficiency plus 10% annual interest</li>
+                    <li><strong>Illegal dismissal:</strong> Reinstatement plus full back wages</li>
+                    <li><strong>Labor standards violations:</strong> Fines of ₱25,000 to ₱100,000</li>
+                    <li><strong>Safety violations:</strong> Fines up to ₱100,000 plus possible closure</li>
+                    <li><strong>Repeat violations:</strong> Higher penalties and possible criminal charges</li>
+                </ul>
+
+                <h3>Getting Started</h3>
+                <ol>
+                    <li><strong>DOLE Registration:</strong> Register your establishment with local DOLE office</li>
+                    <li><strong>Employee Handbook:</strong> Create comprehensive work rules and policies</li>
+                    <li><strong>Payroll System:</strong> Implement proper payroll and timekeeping systems</li>
+                    <li><strong>Benefits Registration:</strong> Register with SSS, PhilHealth, and Pag-IBIG</li>
+                    <li><strong>Safety Program:</strong> Develop occupational safety and health program</li>
+                    <li><strong>Legal Compliance:</strong> Regular review of labor law updates</li>
+                </ol>
+
+                <h3>Useful Resources</h3>
+                <ul>
+                    <li><strong>DOLE Website:</strong> <a href="https://dole.gov.ph" target="_blank">dole.gov.ph</a></li>
+                    <li><strong>DOLE Hotline:</strong> 1349 (for labor complaints)</li>
+                    <li><strong>National Wages and Productivity Commission:</strong> For wage order updates</li>
+                    <li><strong>BWC (Bureau of Working Conditions):</strong> For working conditions guidance</li>
+                </ul>
+                
+                <p class="last-updated"><em>Last updated: December 2024</em></p>
+            </div>
+        </div>
+
+        <!-- Privacy Policy Modal -->
+        <div id="privacy-modal" class="modal-content" style="display: none;">
+            <div class="modal-header">
+                <h2><i class="fas fa-shield-alt"></i> Privacy Policy</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h3>Information We Collect</h3>
+                <p><strong>Personal Information:</strong> We only collect information that you voluntarily provide through our contact forms, including:</p>
+                <ul>
+                    <li>Name and contact information</li>
+                    <li>Company information</li>
+                    <li>Inquiry details and messages</li>
+                </ul>
+
+                <h3>How We Use Your Information</h3>
+                <p>Your information is used solely for:</p>
+                <ul>
+                    <li>Responding to your compliance inquiries</li>
+                    <li>Connecting you with legal experts</li>
+                    <li>Providing educational resources and updates</li>
+                </ul>
+
+                <h3>Information Storage</h3>
+                <p><strong>Local Storage:</strong> Assessment results and checklist progress are stored locally in your browser only. We do not have access to this information.</p>
+                <p><strong>No Server Storage:</strong> This website operates entirely client-side. No personal data is transmitted to or stored on our servers.</p>
+
+                <h3>Data Sharing</h3>
+                <p>We do not sell, trade, or otherwise transfer your personal information to third parties. Information may only be shared with qualified legal professionals when you explicitly request consultation services.</p>
+
+                <h3>Cookies and Analytics</h3>
+                <p>This website does not use cookies or analytics tracking. We do not collect browsing behavior or usage statistics.</p>
+
+                <h3>Data Security</h3>
+                <p>We implement appropriate security measures to protect your personal information. However, no method of transmission over the internet is 100% secure.</p>
+
+                <h3>Your Rights</h3>
+                <p>You have the right to:</p>
+                <ul>
+                    <li>Access your personal information</li>
+                    <li>Correct inaccurate information</li>
+                    <li>Request deletion of your information</li>
+                    <li>Withdraw consent at any time</li>
+                </ul>
+
+                <h3>Contact Information</h3>
+                <p>For privacy-related questions, contact us at: privacy@phcompliancehub.com</p>
+                
+                <p class="last-updated"><em>Last updated: December 2024</em></p>
+            </div>
+        </div>
+
+        <!-- Terms of Service Modal -->
+        <div id="terms-modal" class="modal-content" style="display: none;">
+            <div class="modal-header">
+                <h2><i class="fas fa-file-contract"></i> Terms of Service</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h3>Acceptance of Terms</h3>
+                <p>By accessing and using the Philippines Business Compliance Hub website, you accept and agree to be bound by these Terms of Service.</p>
+
+                <h3>Educational Purpose</h3>
+                <p><strong>Important:</strong> This website is for educational and informational purposes only. It does not constitute legal advice and should not be used as a substitute for consultation with qualified legal professionals.</p>
+
+                <h3>Use of Service</h3>
+                <p>You may use this service to:</p>
+                <ul>
+                    <li>Learn about Philippine business compliance requirements</li>
+                    <li>Use assessment tools for educational purposes</li>
+                    <li>Access general information about business laws</li>
+                    <li>Connect with legal professionals through our referral system</li>
+                </ul>
+
+                <h3>Prohibited Uses</h3>
+                <p>You may not:</p>
+                <ul>
+                    <li>Use the service for any unlawful purpose</li>
+                    <li>Rely solely on this tool for legal compliance decisions</li>
+                    <li>Reproduce or distribute content without permission</li>
+                    <li>Attempt to access restricted areas of the website</li>
+                </ul>
+
+                <h3>Accuracy of Information</h3>
+                <p>While we strive to provide accurate information, laws and regulations change frequently. Information may not be complete or up-to-date. Always verify current requirements with official government sources.</p>
+
+                <h3>Third-Party Services</h3>
+                <p>We may refer you to third-party legal professionals. We are not responsible for the quality, accuracy, or reliability of services provided by these professionals.</p>
+
+                <h3>Limitation of Liability</h3>
+                <p>PH Compliance Hub is not liable for any damages arising from the use of this website or reliance on the information provided. This includes but is not limited to compliance failures, legal issues, or business losses.</p>
+
+                <h3>Intellectual Property</h3>
+                <p>All content on this website is protected by copyright and other intellectual property laws. You may not reproduce, distribute, or modify content without written permission.</p>
+
+                <h3>Changes to Terms</h3>
+                <p>We reserve the right to modify these terms at any time. Continued use of the website constitutes acceptance of modified terms.</p>
+
+                <h3>Governing Law</h3>
+                <p>These terms are governed by the laws of the Republic of the Philippines.</p>
+                
+                <p class="last-updated"><em>Last updated: December 2024</em></p>
+            </div>
+        </div>
+
+        <!-- Disclaimer Modal -->
+        <div id="disclaimer-modal" class="modal-content" style="display: none;">
+            <div class="modal-header">
+                <h2><i class="fas fa-exclamation-triangle"></i> Legal Disclaimer</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h3>No Legal Advice</h3>
+                <p><strong>This website does not provide legal advice.</strong> The information provided is for educational and informational purposes only and should not be construed as legal advice or guidance.</p>
+
+                <h3>Professional Consultation Required</h3>
+                <p>Philippine business law is complex and subject to interpretation. You should always consult with qualified legal professionals for:</p>
+                <ul>
+                    <li>Specific compliance advice tailored to your business</li>
+                    <li>Legal document preparation and review</li>
+                    <li>Regulatory filing and registration</li>
+                    <li>Dispute resolution and legal representation</li>
+                </ul>
+
+                <h3>Accuracy and Currency</h3>
+                <p>While we make every effort to provide accurate information:</p>
+                <ul>
+                    <li>Laws and regulations change frequently</li>
+                    <li>Information may not reflect the most current legal requirements</li>
+                    <li>Different government agencies may have varying interpretations</li>
+                    <li>Regional and local regulations may also apply</li>
+                </ul>
+
+                <h3>Limitation of Liability</h3>
+                <p><strong>Important:</strong> PH Compliance Hub, its creators, and affiliated professionals are not liable for:</p>
+                <ul>
+                    <li>Compliance failures or regulatory violations</li>
+                    <li>Business losses resulting from reliance on this information</li>
+                    <li>Penalties, fines, or legal consequences</li>
+                    <li>Decisions made based on the assessment tools</li>
+                </ul>
+
+                <h3>Government Sources</h3>
+                <p>For official and authoritative information, consult these government agencies directly:</p>
+                <ul>
+                    <li><strong>National Privacy Commission (NPC)</strong> - Data Privacy Act compliance</li>
+                    <li><strong>Securities and Exchange Commission (SEC)</strong> - Corporate compliance</li>
+                    <li><strong>Bureau of Internal Revenue (BIR)</strong> - Tax obligations</li>
+                    <li><strong>Department of Labor and Employment (DOLE)</strong> - Labor law compliance</li>
+                </ul>
+
+                <h3>Assessment Tool Limitations</h3>
+                <p>The compliance assessment tools:</p>
+                <ul>
+                    <li>Provide general guidance only</li>
+                    <li>Cannot account for all business scenarios</li>
+                    <li>Should not replace professional legal assessment</li>
+                    <li>May not cover all applicable laws and regulations</li>
+                </ul>
+
+                <h3>Updates and Changes</h3>
+                <p>We reserve the right to update, modify, or discontinue any part of this website without notice. Users are responsible for staying informed about current legal requirements.</p>
+
+                <h3>Use at Your Own Risk</h3>
+                <p>By using this website, you acknowledge that you understand these limitations and agree to use the information at your own risk.</p>
+
+                <p class="disclaimer-footer">
+                    <strong>When in doubt, consult with licensed attorneys specializing in Philippine business law.</strong>
+                </p>
+                
+                <p class="last-updated"><em>Last updated: December 2024</em></p>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
